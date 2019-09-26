@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get(
@@ -19,7 +20,9 @@ Route::get(
 }
 );
 
-Route::get('/test', 'TestController@index');
+
+Route::get('/skill-up/{id}', 'SkillUpController@view');
+
 
 Route::resource('photo', 'PhotoController', []);
 
